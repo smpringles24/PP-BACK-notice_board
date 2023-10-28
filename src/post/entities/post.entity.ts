@@ -18,6 +18,12 @@ export class PostEntity extends BaseEntity {
   @Column()
   contents: string;
 
+  @Column({ default: 'Anonymous' })
+  writer: string;
+
+  @Column({ type: 'int', default: 0 })
+  view: number;
+
   @CreateDateColumn()
   createdAt: Date;
 
